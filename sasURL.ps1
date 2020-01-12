@@ -2,8 +2,8 @@ param (
     
     # Event Hub Information:
     [string]       $EventHubNamespace = "namespace",
-    [string]       $EventHubName = "event-hub"
-    [int]          $Expiration = 30000 # Token expires now+30000 seconds
+    [string]       $EventHubName = "event-hub",
+    [int]          $Expiration = 30000, # Token expires now+30000 seconds
     
     # Shared Access Policy Information:
     [string]       $AccessPolicyKey = "#",
