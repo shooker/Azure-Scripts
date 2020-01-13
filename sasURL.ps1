@@ -22,6 +22,6 @@ $HMAC.key = [Text.Encoding]::ASCII.GetBytes($Access_Policy_Key)
 $Signature = $HMAC.ComputeHash([Text.Encoding]::ASCII.GetBytes($SignatureString))
 $Signature = [Convert]::ToBase64String($Signature)
 $SASToken = "sr=" + [System.Web.HttpUtility]::UrlEncode($URI) + "&sig=" + [System.Web.HttpUtility]::UrlEncode($Signature) + "&se=" + $Expires + "&skn=" + $Access_Policy_Name
-$SasURL = "https://" + $_URI + '?' + $SASToken
+$SasURL = "https://" + $URI + '?' + $SASToken
 
 $SasURL
