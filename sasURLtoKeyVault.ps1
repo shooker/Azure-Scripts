@@ -9,10 +9,11 @@ param (
     [string]       $EventHubName = "#",
     [string]       $ResourceGroupName = "#",
     [string]       $AccessPolicyName = "#",
-    [int]          $Expiration = 3000000 # Token expires now+3000000 seconds
+    [int]          $Expiration = 2592000 # Token expires in 2,592,000 seconds, or 30 days.
    
 )
 
+# Create Shared Access Policy
 New-AzEventHubAuthorizationRule -ResourceGroupName $ResourceGroupName -NamespaceName $EventHubNamespace -AuthorizationRuleName $AccessPolicyName -EventHub $EventHubName -Rights @("Send")
 
 # Retreive primary key for Event Hub
