@@ -16,4 +16,5 @@ This simple Python script takes the Microsoft JSON file as an input, removes dup
 
 ## Notes
 - As of April 2020 there is an [API in Preview](https://azure.microsoft.com/en-us/updates/service-tag-discovery-api-in-preview/) to download these IP addresses. The output from this API call is provided in the same format as the input file used in this code. This will help users obtain more granular ranges.
-- Upload the output CSV to a blob storage container to use with Azure Sentinel.
+- Upload the output CSV to a blob storage container to use with Azure Sentinel
+- You can automate this entire process using the new API and Azure Functions
