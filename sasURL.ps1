@@ -1,13 +1,13 @@
 param (
     
     # Event Hub Information:
-    [string]       $EventHubNamespace = "namespace",
-    [string]       $EventHubName = "event-hub",
+    [string]       $EventHubNamespace = "diagext",
+    [string]       $EventHubName = "oslogs",
     [int]          $Expiration = 30000, # Token expires now+30000 seconds
     
     # Shared Access Policy Information:
-    [string]       $AccessPolicyKey = "#",
-    [string]       $AccessPolicyName = "#"
+    [string]       $AccessPolicyKey = "vCBDAR3YD6sqSAI06SOC0/sIsfimug8z5H02B5cy5aI=",
+    [string]       $AccessPolicyName = "diagext-Send"
 )
 
 # Generate Event Hub SAS URL
