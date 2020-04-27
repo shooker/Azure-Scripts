@@ -25,8 +25,8 @@ df['IPs'] = "2"
 df['IPs'] = pd.to_numeric(df['IPs'])
 df['IPs'] = (df['IPs']).pow(32 - (df['CIDR']))
 
-# Put IPs into a list and add back into DataFrame
 # Python ipaddress module cannot recognize IP addresses directly inside of DataFrame
+# Put IPs into a list and add back into DataFrame
 
 rawstartips = df['StartIPv4'].tolist()
 
@@ -51,12 +51,10 @@ endipsshort = []
 
 for ip in endipslong:
     endipsshort.append(str(ipaddress.ip_address(ip)))
-    
-endipsshort
 
 df['EndIPv4'] = endipsshort
 
-# Rearrange DataFrame columns (useful in a notebook)
+# Re-Arrange DataFrame columns (useful in a Jupyter Notebook)
 # df = df[['StartIPv4', 'EndIPv4', 'CIDR', 'IPs', 'StartIP-64', 'EndIP-64']]
 
 # Export start and end to a CSV
