@@ -1,6 +1,5 @@
 import json
 import pandas as pd
-import numpy as np
 import ipaddress
 
 # Update this with file downloaded from Microsoft here:
