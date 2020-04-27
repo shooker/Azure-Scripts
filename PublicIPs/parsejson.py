@@ -42,7 +42,7 @@ df['EndIP-64'] = df['StartIP-64'] + df['IPs']
 
 # Export start and end 64-bit IPs to a CSV
 header = ['StartIP-64','EndIP-64']
-df.to_csv('start_end_ips_64.csv', columns = header, index = False, header = False)
+df.to_csv('start_end_ips_64.csv', columns = header, index = False)
 print("Start and end IPs in 64-bit format saved as start_end_ips_64.csv")
 
 endipslong = df['EndIP-64'].tolist()
@@ -61,5 +61,5 @@ df['EndIPv4'] = endipsshort
 
 # Export start and end to a CSV
 header = ['StartIPv4','EndIPv4']
-df.to_csv('start_end_ips.csv', columns = header, index = False, header = False)
+df.to_csv('start_end_ips.csv', columns = header, index = False)
 print("Start and end IPs in IPv4 format saved as start_end_ips.csv")
