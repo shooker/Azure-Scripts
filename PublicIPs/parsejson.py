@@ -35,17 +35,17 @@ startips = []
 for ip in rawstartips:
     startips.append(int(ipaddress.ip_address(ip)))
 
-df['StartIP-64'] = startips
+df['StartIP64'] = startips
 
 # Calculate end IP address
-df['EndIP-64'] = df['StartIP-64'] + df['IPs']
+df['EndIP64'] = df['StartIP64'] + df['IPs']
 
 # Export start and end 64-bit IPs to a CSV
-header = ['StartIP-64','EndIP-64']
+header = ['StartIP64','EndIP64']
 df.to_csv('start_end_ips_64.csv', columns = header, index = False)
 print("Start and end IPs in 64-bit format saved as start_end_ips_64.csv")
 
-endipslong = df['EndIP-64'].tolist()
+endipslong = df['EndIP64'].tolist()
 
 endipsshort = []
 
@@ -55,7 +55,7 @@ for ip in endipslong:
 df['EndIPv4'] = endipsshort
 
 # Re-Arrange DataFrame columns (useful in a Jupyter Notebook)
-# df = df[['StartIPv4', 'EndIPv4', 'CIDR', 'IPs', 'StartIP-64', 'EndIP-64']]
+# df = df[['StartIPv4', 'EndIPv4', 'CIDR', 'IPs', 'StartIP64', 'EndIP64']]
 
 # Export start and end to a CSV
 header = ['StartIPv4','EndIPv4']
