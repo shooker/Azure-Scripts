@@ -18,7 +18,7 @@ The simple Python script called **parsejson.py** takes the JSON file [downloaded
 4. Run it!
 
 # But can it be automated?
-![Flow Diagram](PublicIPs/Diagram.png)
+![Flow Diagram](https://github.com/shooker/Azure-Scripts/blob/master/PublicIPs/Diagram.png)
 ## Automated/api_to_blob.py Script:
 The Python script in the Automation folder called **apy_to_blob.py** calls the Microsoft [Service Tag List API](https://docs.microsoft.com/en-us/rest/api/virtualnetwork/servicetags/list), performs the same transformations in the parsejson.py script, and uploads the file to a Blob Container in Azure Storage. Use it as a baseline to refactor into your existing business processes or build it as an Azure [Function App](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview).
 
