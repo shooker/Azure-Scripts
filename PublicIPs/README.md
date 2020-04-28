@@ -1,5 +1,5 @@
 # Azure Public IP Address List in CSV Format
-Azure is a massive public cloud and Microsoft maintains a list of IP address ranges for Public Azure as a whole, along with ranges for several Azure Serices ([Service Tags](https://docs.microsoft.com/en-us/azure/virtual-network/service-tags-overview)).
+Azure is a massive public cloud and Microsoft maintains a list of IP address ranges for Public Azure as a whole, along with ranges for several Azure Services ([Service Tags](https://docs.microsoft.com/en-us/azure/virtual-network/service-tags-overview)).
 
 These IP ranges are delivered weekly on [Microsoft's website](https://www.microsoft.com/en-us/download/details.aspx?id=56519) as a JSON file. However, many network monitoring tools and SIEMs, including Azure Sentinel, prefer a Start IP and End IP address range or CIDR block.
 
