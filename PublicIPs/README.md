@@ -25,5 +25,5 @@ This script leverages the [API in Preview](https://azure.microsoft.com/en-us/upd
 2. Create an [App Registration](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) in Azure Active Directory with Reader permissions on an Azure subscription
 3. Create a Client Secret for the App, determine your expiration policy and save the value
 4. Create a Storage Account in Azure and save the connection string for the account
-5. Update lines 13-16 and line 28 with the information from Steps 3 and 4
+5. For testing, update lines 13-16 and line 28 with the information from Steps 3 and 4. Store your final secrets and other sensitive values in another location such as Azure [Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts).
 6. Update Container and Blob names as needed on lines 24-26 and line 38
