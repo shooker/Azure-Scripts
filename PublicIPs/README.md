@@ -8,6 +8,7 @@ The simple Python script called **parsejson.py** takes the Microsoft JSON file a
 - The Public IP ranges in CIDR notation
 - The Start and End IP address of each range in IPv4 format
 - The Start and End IP address of each range in "long" 64-bit format
+
 *Samples of each file are located in SampleOutput folder.*
 
 1. Ensure that you have Python 3.6 and Pandas installed
