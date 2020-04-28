@@ -125,13 +125,13 @@ startips = []
 for ip in rawstartips:
     startips.append(int(ipaddress.ip_address(ip)))
 
-df['StartIP-64'] = startips
+df['StartIP64'] = startips
 
 # Calculate end IP address
-df['EndIP-64'] = df['StartIP-64'] + df['IPs']
+df['EndIP64'] = df['StartIP64'] + df['IPs']
 
 # Export start and end 64-bit IPs to a CSV
-header = ['StartIP-64','EndIP-64']
+header = ['StartIP64','EndIP64']
 df.to_csv(long_ip_file_name, columns = header, index = False)
 
 # Save 64-bit IP CSV file to Blob Storage
@@ -141,7 +141,7 @@ with open(long_ip_file_name, "rb") as data:
     blob_client.upload_blob(data, overwrite=True)
 print("Start and end IPs in 64-bit format saved to Azure Blob as: " + long_ip_file_name)
 
-endipslong = df['EndIP-64'].tolist()
+endipslong = df['EndIP64'].tolist()
 
 endipsshort = []
 
