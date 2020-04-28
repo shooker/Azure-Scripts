@@ -7,7 +7,7 @@ These IP ranges are delivered weekly on [Microsoft's website](https://www.micros
 The simple Python script called **parsejson.py** takes the JSON file [downloaded](https://www.microsoft.com/en-us/download/details.aspx?id=56519) from Microsoft as an input, removes duplicate entries, and exports 3 CSV files in your working directory:
 - The Public IP address ranges in CIDR notation de-nested (or extracted) from the JSON
 - The Start and End IP address of each range in IPv4 format
-- The Start and End IP address of each range in "long" 64-bit format, which is required in Azure Sentinel when using the [parse_ipv4() function](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/parse-ipv4function)
+- The Start and End IP address of each range in "long" 64-bit format, which is required in [Azure Sentinel](https://docs.microsoft.com/en-us/azure/sentinel/overview) when using the [parse_ipv4() function](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/parse-ipv4function)
 
 *Samples of each file are located in SampleOutput folder*
 
