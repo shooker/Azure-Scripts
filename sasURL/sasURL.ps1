@@ -6,7 +6,7 @@ param (
     [int]          $Expiration = 30000, # Token expires now+30000 seconds
     
     # Shared Access Policy Information:
-    [string]       $AccessPolicyKey = "vCBDAR3YD6sqSAI06SOC0/sIsfimug8z5H02B5cy5aI=",
+    [string]       $AccessPolicyKey = "Your Access Policy Key",
     [string]       $AccessPolicyName = "diagext-Send"
 )
 
