@@ -20,9 +20,9 @@ The simple Python script called **parsejson.py** takes the JSON file [downloaded
 # But can it be automated?
 ![Flow Diagram](https://github.com/shooker/Azure-Scripts/blob/master/PublicIPs/Diagram.png)
 ## Automated/api_to_blob.py Script:
-The Python script in the Automation folder called **apy_to_blob.py** calls the Microsoft [Service Tag List API](https://docs.microsoft.com/en-us/rest/api/virtualnetwork/servicetags/list), performs the same transformations in the parsejson.py script, and uploads the file to a Blob Container in Azure Storage. Use it as a baseline to refactor into your existing business processes or build it as an Azure [Function App](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview).
+The Python script in the Automation folder called **apy_to_blob.py** calls the Microsoft [Service Tag Lfist API](https://docs.microsoft.com/en-us/rest/api/virtualnetwork/servicetags/list), performs the same transformations in the parsejson.py script, and uploads the files to a Blob Container in Azure Storage. Use it as a baseline to refactor into your existing business processes or build it as an Azure [Function App](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview).
 
-This script leverages the [API in Preview](https://azure.microsoft.com/en-us/updates/service-tag-discovery-api-in-preview/) to obtain the latest data from Microsoft to keep your IP address ranges current. The data obtained from this API call is provided in the same format as the file available on [Microsoft's website](https://www.microsoft.com/en-us/download/details.aspx?id=56519).
+This script leverages the [API in Preview](https://azure.microsoft.com/en-us/updates/service-tag-discovery-api-in-preview/) to obtain the latest data from Microsoft to keep your IP address ranges current. The data returned by this API call is provided in the same format as the file available on [Microsoft's website](https://www.microsoft.com/en-us/download/details.aspx?id=56519).
 
 ### Pre-Requisites
 1. Ensure that you have Python 3.6, Pandas, and azure-storage-blob modules installed
